@@ -12,19 +12,42 @@ Core concepts:
 """
 
 from .identity import AgentIdentity
-from .transformation import Transformation, Trigger, Requirement
-from .evolution import EvolutionEngine
+from .transformation import (
+    Transformation,
+    TransformationRecord,
+    Trigger,
+    TriggerType,
+    Requirement,
+    RequirementType,
+)
+from .evolution import EvolutionEngine, EvolutionResult
 from .milestone import Milestone, MilestoneStatus
-from .registry import TransformationRegistry
+from .registry import TransformationRegistry, RegistryEntry
+from .protocol import TransformProtocol, StateRule, TransitionRule
+from .capability import CapabilityTree, CapabilityNode
+from .assessment import AssessmentEngine, ReadinessReport, ProgressReport
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 __all__ = [
     "AgentIdentity",
     "Transformation",
+    "TransformationRecord",
     "Trigger",
+    "TriggerType",
     "Requirement",
+    "RequirementType",
     "EvolutionEngine",
+    "EvolutionResult",
     "Milestone",
     "MilestoneStatus",
     "TransformationRegistry",
+    "RegistryEntry",
+    "TransformProtocol",
+    "StateRule",
+    "TransitionRule",
+    "CapabilityTree",
+    "CapabilityNode",
+    "AssessmentEngine",
+    "ReadinessReport",
+    "ProgressReport",
 ]
